@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const product = await response.json();
 
+        // Success toast notification
+        showToast("Products loaded successfully!", "success");
+
         wrapper.innerHTML = `
             <div class="product-image-box">
                 <img src="${product.image}" alt="${escapeHTML(product.title)}">
@@ -34,65 +37,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
         `;
 
-        // Success toast notification
-        showToast("Products loaded successfully!", "success");
 
     } catch (error) {
         console.error("Error loading product detail:", error);
+        showToast("Failed to load product detail.", "error");
         wrapper.innerHTML = "<p style='color: red; text-align: center;'>Failed to load product details. Please try again.</p>";
-        showToast("Failed to load product.", "error");
     } finally {
         hideLoader();
     }
 });
-
-// --- UI Helper Functions (Required so showToast doesn't crash) ---
-function setupUIComponents() {
-    if (!document.getElementById("custom-loader")) {
-        const loaderHTML = `
-            <div id="custom-loader" style="display: none;">
-                <div class="spinner"></div>
-            </div>
-        `;
-        document.body.insertAdjacentHTML("beforeend", loaderHTML);
-    }
-
-    if (!document.getElementById("custom-toast")) {
-        const toastHTML = `<div id="custom-toast"></div>`;
-        document.body.insertAdjacentHTML("beforeend", toastHTML);
-    }
-}
-
-function showLoader() {
-    const loader = document.getElementById("custom-loader");
-    if (loader) loader.style.display = "flex";
-}
-
-function hideLoader() {
-    const loader = document.getElementById("custom-loader");
-    if (loader) loader.style.display = "none";
-}
-function showToast(message, type = "success") {
-    const toast = document.getElementById("custom-toast");
-    if (!toast) return;
-
-    // 1. Clear any active classes and text immediately
-    toast.className = "";
-    toast.textContent = message;
-
-    // 2. Force a browser reflow/repaint so the animation restarts
-    void toast.offsetWidth;
-
-    // 3. Apply the show and type classes
-    toast.className = `show ${type}`;
-
-    // 4. Clear it after 3 seconds
-    setTimeout(() => {
-        toast.className = "";
-    }, 3000);
-}
-function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, 
-        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-    );
-}
