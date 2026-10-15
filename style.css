@@ -422,7 +422,7 @@ input:focus{
         .gallery img{
             width: 20vh;
             height: 20vh;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center top;
             border-radius: 10px;
         }
@@ -550,7 +550,7 @@ input:focus{
         .gallery img{
             width: 37vh;
             height: 40vh;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center top;
             border-radius: 10px;
         }
