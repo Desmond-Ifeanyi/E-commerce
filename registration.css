@@ -49,12 +49,10 @@
   color: #777777;
   text-decoration: none;
 }
-
 .ri-eye-off-line, .ri-eye-line{
-  position: absolute;
-  top: 45.5rem;
-  left: 18rem;
-  bottom: 0;
+  position: relative;
+  left: 9rem;
+  bottom: 1.7rem;
   right: 0;
 }
 
