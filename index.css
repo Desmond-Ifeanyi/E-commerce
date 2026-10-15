@@ -1,0 +1,89 @@
+
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.login-container h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background-color: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+  color: #333333;
+}
+
+.input-group input::placeholder {
+  color: #999999;
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 1.5rem 0 2rem 0;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.link-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.link-row a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.link-row a:hover {
+  text-decoration: underline;
+}
+
+
+.ri-eye-off-line, .ri-eye-line{
+  position: absolute;
+  top: 42rem;
+  left: 18rem;
+  bottom: 0;
+  right: 0;
+}
+
+
+.sign-in-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #7d7775;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sign-in-btn:hover {
+  background-color: #6a6462;
+}
