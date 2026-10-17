@@ -49,8 +49,8 @@
             showToast("All products loaded successfully!", "success");
         } catch (error) {
             console.error("Error fetching data:", error);
-            showToast("Failed to load products. Please try again.", "error");
-            productContainer.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: red;">Failed to load products.</p>`;
+            // showToast("Failed to load products. Please try again.", "error");
+            productContainer.innerHTML = `<p style="grid-column: 1/-1;  margin: 0 auto; color: red;  font-size: 1rem;">Failed to load products.</p>`;
         } finally {
             hideLoader();
         }

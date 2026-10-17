@@ -6,11 +6,9 @@ const togglePassword = document.getElementById("togglePassword");
 
     if (togglePassword && passwordInput) {
         togglePassword.addEventListener("click", () => {
-            // Toggle the type attribute
             const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
             passwordInput.setAttribute("type", type);
 
-            // Toggle the icon class (eye / eye-off)
             togglePassword.classList.toggle("ri-eye-line");
             togglePassword.classList.toggle("ri-eye-off-line");
         });

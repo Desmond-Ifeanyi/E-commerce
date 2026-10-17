@@ -1,8 +1,7 @@
 
 // ============PAGINATION==============
 
-
-    const propertiesPerPage = 5;
+const propertiesPerPage = 5;
 let propertyCurrentPage = 1;
 
 const propertyContainer = document.getElementById("propertyContainer");
