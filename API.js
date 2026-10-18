@@ -154,3 +154,21 @@
     }
 
 
+
+
+    // ======LOGOUT BUTTON==================
+
+
+const logoutBtn = document.getElementById("logoutBtn"); // Update to match your logout button ID
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        
+        // Remove active session
+        localStorage.removeItem("loggedInUser");
+        
+        alert("You have been logged out.");
+        window.location.href = "index.html"; // Redirect to login page
+    });
+}

@@ -46,6 +46,24 @@ nav ul li:hover{
 
 
 
+nav button {
+  width: 100%;
+  max-width: 100px;
+  padding: 0.6rem;
+  background-color: #7d7775;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: .8rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+nav button :hover {
+  background-color: #6a6462;
+}
 
 
 nav img{
@@ -396,13 +414,24 @@ input:focus{
                 padding: 1rem;
                 gap: 1.2rem;
             }
-
+                        
+           
+                        
+            nav button {
+               align-self: self-end;
+                padding: 0.5rem;            
+                font-size: .6rem;
+                font-weight: 200;
+                min-width: 50px;
+            }
+         
 
             .next-previous{
             margin: 0 auto;
             font-size: .9rem;
             gap: 1rem;
             width: 85%;
+            min-width: 85%;
             padding: 2px 1rem;
         
         }
@@ -472,13 +501,20 @@ input:focus{
         width: 25rem;
     }
 
-
-     nav {
+       nav button{
+             align-self: self-end;
+            padding: 0.6rem;            
+            font-size: .8rem;
+            font-weight: 200;
+            min-width: 100px;
+       }
+            nav {
         flex-direction: row;
         align-items: center;
         padding: 1rem;
         gap: 1.2rem;
     }
+
 
     nav ul {
         flex-wrap: wrap;
